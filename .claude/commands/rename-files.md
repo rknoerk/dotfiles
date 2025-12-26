@@ -1,71 +1,62 @@
 # File Rename
 
-**Version:** 1.01 - 2025-12-24
+**Version:** 2.0 - 2025-12-26
 
-I have a folder of messy files in a folder that I will provide to you. I want them renamed and organized.
+I have a folder of messy files that I will provide to you. I want them renamed and organized.
 
-TASK: Process these in batches of 5 with checkpoints for my review.
+## PHASE 1: ANALYZE (no user input needed)
 
-## PHASE 1: ANALYZE
+Scan ALL files in the folder. For each file:
+1. Skip system files (.DS_Store, .localized, desktop.ini)
+2. Auto-flag for deletion: temp files (~$*), exact duplicates (filename with " (1)", " (2)" etc. that have identical content)
+3. Read contents where possible to identify type: receipt, statement, or project
 
-Look at all the files in this folder. For any files that look messy/do not already follow the naming conventions below, read the contents where possible. Identify if the document is a receipt, statement, or something project-related.
+**Naming conventions:**
 
-**Naming convention for receipts:**
-'YYYY-MM-DD [Vendor] [Was] [Betrag].ext'
-
-**Naming convention for statements:**
-'YYYY-MM-DD [Financial Institution] [Month].ext' (if monthly)
-'YYYY-MM-DD [Financial Institution] [Quarter].ext' (if quarterly)
-'YYYY-MM-DD [Financial Institution] [Keyword].ext' (for anything that's not monthly/quarterly)
-
-**Naming convention for project-related files:**
-'YYYY-MM-DD [Project] [Topic] [Keyword] [Version].ext' (keyword and version are optional)
-'YYYY Project [Topic] [Keyword] [Version].ext' if date is not explicit (keyword and version are optional)
+Receipts: `YYYY-MM-DD [Vendor] [Was] [Betrag].ext`
+Statements: `YYYY-MM-DD [Institution] [Month/Quarter/Keyword].ext`
+Projects: `YYYY-MM-DD [Project] [Topic] [Keyword] [Version].ext` or `YYYY [Project] [Topic].ext` if no exact date
 
 Components:
-1. **Date** (YYYY-MM-DD): Receipt/invoice date, statement date, document date if explicit
-2. **Year** (YYYY): document date if year is not explicit
-3. **Vendor**: Who was paid (short, consistent: Amazon, REWE, DHL, etc.)
-4. **Financial Institution**: Name of the bank that issued the statement (abbreviate, consistent: SPK GM, SPK H, Schwab, BBVA, BofA, etc.)
-5. **Month** (MM): Month of the transaction within the statement
-6. **Quarter** (Qn): Quarter of the transactions within the statement (e.g. Q1, Q2, Q3, Q4)
-7. **Was**: Brief description (Büromaterial, Fahrtkosten, Software, Catering)
-8. **Betrag** (optional): Amount for quick scanning (12,50 or 149,00)
-9. **Project**: Project name, short and consistent for easy reference (e.g. Spur, Blackbird, Setkit, Quickbooks)
-10. **Topic**: Thema, Anlass, Lieferant
-11. **Keyword**: inhaltliches Stichwort
-12. **Version**: Version if provided or '_signed' for documents that require signatures
+- **Date** (YYYY-MM-DD): From document content
+- **Vendor**: Short, consistent (Amazon, REWE, DHL)
+- **Institution**: Abbreviated (SPK GM, DKB, BofA, Schwab)
+- **Betrag**: Optional amount (12,50 or 149,00)
+- **Project**: Short name (Spur, Blackbird, Setkit)
+- **Version**: If provided, or `_signed` for signed documents
 
-Separators: Spaces for readability.
+Separators: Spaces
 
-**Examples:**
-- '2024-03-15 Amazon USB-Kabel 12,99.pdf'
-- '2024-03-20 REWE Catering Dreh 89,50.pdf'
-- '2024-04-01 Adobe CreativeCloud Abo.pdf'
-- '2022-12-02 DKB 12.pdf'
-- '2022-12-30 DKB Jahresabschluss.pdf'
+## PHASE 2: PRESENT COMPLETE PLAN
 
-**Your task:**
-1. Identify type of document: receipt, statement, project
-2. Extract from each file depending on document type:
-   - receipt date, vendor, description
-   - statement date, financial institution, month or quarter
-   - project date or year, project name, topic, keyword, version
-3. Propose new filename
-4. Suggest subfolder by Vendor, Project OR by month (YYYY-MM)
+Present ONE summary table with ALL files:
 
-Present as tables:
+| # | Current Name | Action | Proposed Name | Subfolder | Confidence |
 
-| Current Name | Date | Proposed Name | Subfolder | Confidence |
+Actions: RENAME, DELETE (duplicate), DELETE (temp), SKIP (already correct)
 
-Flag files where date/vendor/financial institution/project couldn't be extracted.
+Flag any files where extraction failed with ⚠️.
 
-DO NOT rename yet.
+Show summary:
+- Total files to rename
+- Total duplicates to delete
+- Total temp files to delete
+- Subfolders to create
 
----
+Ask ONCE: "Proceed with all changes? (yes / no / review [numbers])"
 
-## PHASE 2: EXECUTE (after my approval)
+## PHASE 3: EXECUTE (after single approval)
 
-Rename files, create subfolders, log all changes.
+If "yes": Execute all changes, log results.
+If "review [numbers]": Show details for those files, then ask again.
+If "no": Abort.
 
 STOP if any overwrite would occur.
+
+## OUTPUT
+
+Final summary with:
+- Files renamed
+- Files deleted
+- Folders created
+- Any errors
