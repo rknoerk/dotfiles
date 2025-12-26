@@ -1,6 +1,6 @@
 # File Rename
 
-**Version:** 2.1 - 2025-12-26
+**Version:** 2.2 - 2025-12-26
 
 I have a folder of messy files that I will provide to you. I want them renamed and organized.
 
