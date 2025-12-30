@@ -1,0 +1,50 @@
+diff --git a/app.py b/app.py
+index 9dc6dca..911ed8d 100644
+--- a/app.py
++++ b/app.py
+@@ -118,17 +118,20 @@ def get_strecke_details(von_ds100: str, nach_ds100: str) -> dict:
+             routenpunkte = route['routenpunkte']
+             letzter = routenpunkte[-1]
+ 
+-            # Nur Kundenhalte extrahieren
++            # Nur Kundenhalte mit Bahnhofsnamen extrahieren
+             kundenhalte = []
+             for punkt in routenpunkte:
+                 halt = punkt.get('haltart', '')
+                 if halt == 'kundenhalt':
+                     ds100 = punkt.get('ds100', '')
+-                    km = punkt.get('laufende_hm', 0) / 10
+-                    kundenhalte.append({
+-                        'ds100': ds100,
+-                        'km': km,
+-                    })
++                    # Nur Halte mit bekanntem Namen aufnehmen
++                    if ds100 in DS100_NAMEN:
++                        km = punkt.get('laufende_hm', 0) / 10
++                        kundenhalte.append({
++                            'ds100': ds100,
++                            'name': DS100_NAMEN[ds100],
++                            'km': km,
++                        })
+ 
+             # VzG-Strecken sammeln
+             vzg_strecken = []
+@@ -312,8 +315,7 @@ if st.button("🔍 Berechnen", type="primary", use_container_width=True):
+                 # Halte als übersichtliche Liste
+                 halte_text = ""
+                 for i, halt in enumerate(kundenhalte):
+-                    ds100 = halt['ds100']
+-                    name = DS100_NAMEN.get(ds100, ds100)  # Name oder DS100-Code
++                    name = halt['name']
+                     km_wert = halt['km']
+ 
+                     if i == 0:
+@@ -335,7 +337,7 @@ if st.button("🔍 Berechnen", type="primary", use_container_width=True):
+             # Details
+             with st.expander("📋 Details für Dokumentation"):
+                 vzg = strecke.get("vzg_strecken", [])
+-                halte_namen = [DS100_NAMEN.get(h['ds100'], h['ds100']) for h in kundenhalte]
++                halte_namen = [h['name'] for h in kundenhalte]
+ 
+                 st.markdown(f"""
+ **Route:** {von} → {nach}
