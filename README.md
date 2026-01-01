@@ -8,6 +8,7 @@ Custom Slash-Commands für Claude Code. Nutzung: `/command-name` im CLI.
 
 | Command | Beschreibung |
 |---------|--------------|
+| `/cos` | Chief of Staff - Morning Briefing, Tasks, Emails (Mobile) |
 | `/rename-files` | Dateien nach Namenskonventionen umbenennen und organisieren |
 
 ## Setup
