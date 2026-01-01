@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:chief-of-staff-cos.fly.dev)"
+    ]
+  }
+}
