@@ -8,7 +8,7 @@ Falls der User noch keinen Token hat, zeige diese Anleitung:
 
 ```
 Hol dir deinen Token:
-1. Öffne: https://chief-of-staff-worker.rknoerk.workers.dev/login
+1. Öffne: https://46-224-126-212.nip.io/login
 2. Google Sign-In
 3. Kopiere den Token
 ```
@@ -33,13 +33,13 @@ Was kann ich für dich tun?
 
 Nutze diese URLs mit `?token=USER_TOKEN`:
 
-- **Context**: `https://chief-of-staff-worker.rknoerk.workers.dev/context`
-- **Tasks heute**: `https://chief-of-staff-worker.rknoerk.workers.dev/tasks/today`
-- **Alle Tasks**: `https://chief-of-staff-worker.rknoerk.workers.dev/tasks/open`
-- **Ungelesene Emails**: `https://chief-of-staff-worker.rknoerk.workers.dev/emails/unread`
-- **Aktuelle Emails**: `https://chief-of-staff-worker.rknoerk.workers.dev/emails/recent`
-- **Notes/Werkbank**: `https://chief-of-staff-worker.rknoerk.workers.dev/notes/werkbank`
-- **Projekte**: `https://chief-of-staff-worker.rknoerk.workers.dev/notes/projects`
+- **Context**: `https://46-224-126-212.nip.io/context`
+- **Tasks heute**: `https://46-224-126-212.nip.io/tasks/today`
+- **Alle Tasks**: `https://46-224-126-212.nip.io/tasks/open`
+- **Ungelesene Emails**: `https://46-224-126-212.nip.io/emails/unread`
+- **Aktuelle Emails**: `https://46-224-126-212.nip.io/emails/recent`
+- **Notes/Werkbank**: `https://46-224-126-212.nip.io/notes/werkbank`
+- **Projekte**: `https://46-224-126-212.nip.io/notes/projects`
 
 ## Option 1: Morning Briefing
 
