@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:chief-of-staff-cos.fly.dev)",
-      "WebFetch(domain:46-224-126-212.nip.io)"
+      "WebFetch(domain:46-224-126-212.nip.io)",
+      "WebFetch(domain:api.ipify.org)"
     ]
   }
 }
