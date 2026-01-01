@@ -8,7 +8,7 @@ Falls der User noch keinen Token hat, zeige diese Anleitung:
 
 ```
 Hol dir deinen Token:
-1. Öffne: https://chief-of-staff-cos.fly.dev/login
+1. Öffne: https://web-production-a841f.up.railway.app/login
 2. Google Sign-In
 3. Kopiere den Token
 ```
@@ -33,13 +33,13 @@ Was kann ich für dich tun?
 
 Nutze diese URLs mit `?key=cos-2026-mobile&token=USER_TOKEN`:
 
-- **Context**: `https://chief-of-staff-cos.fly.dev/context`
-- **Tasks heute**: `https://chief-of-staff-cos.fly.dev/tasks/today`
-- **Alle Tasks**: `https://chief-of-staff-cos.fly.dev/tasks/open`
-- **Ungelesene Emails**: `https://chief-of-staff-cos.fly.dev/emails/unread`
-- **Aktuelle Emails**: `https://chief-of-staff-cos.fly.dev/emails/recent`
-- **Notes/Werkbank**: `https://chief-of-staff-cos.fly.dev/notes/werkbank`
-- **Projekte**: `https://chief-of-staff-cos.fly.dev/notes/projects`
+- **Context**: `https://web-production-a841f.up.railway.app/context`
+- **Tasks heute**: `https://web-production-a841f.up.railway.app/tasks/today`
+- **Alle Tasks**: `https://web-production-a841f.up.railway.app/tasks/open`
+- **Ungelesene Emails**: `https://web-production-a841f.up.railway.app/emails/unread`
+- **Aktuelle Emails**: `https://web-production-a841f.up.railway.app/emails/recent`
+- **Notes/Werkbank**: `https://web-production-a841f.up.railway.app/notes/werkbank`
+- **Projekte**: `https://web-production-a841f.up.railway.app/notes/projects`
 
 ## Option 1: Morning Briefing
 
