@@ -8,7 +8,7 @@ Falls der User noch keinen Token hat, zeige diese Anleitung:
 
 ```
 Hol dir deinen Token:
-1. Öffne: https://chief-of-staff-server.vercel.app/login
+1. Öffne: https://chief-of-staff-worker.rknoerk.workers.dev/login
 2. Google Sign-In
 3. Kopiere den Token
 ```
@@ -33,13 +33,13 @@ Was kann ich für dich tun?
 
 Nutze diese URLs mit `?token=USER_TOKEN`:
 
-- **Context**: `https://chief-of-staff-server.vercel.app/context`
-- **Tasks heute**: `https://chief-of-staff-server.vercel.app/tasks/today`
-- **Alle Tasks**: `https://chief-of-staff-server.vercel.app/tasks/open`
-- **Ungelesene Emails**: `https://chief-of-staff-server.vercel.app/emails/unread`
-- **Aktuelle Emails**: `https://chief-of-staff-server.vercel.app/emails/recent`
-- **Notes/Werkbank**: `https://chief-of-staff-server.vercel.app/notes/werkbank`
-- **Projekte**: `https://chief-of-staff-server.vercel.app/notes/projects`
+- **Context**: `https://chief-of-staff-worker.rknoerk.workers.dev/context`
+- **Tasks heute**: `https://chief-of-staff-worker.rknoerk.workers.dev/tasks/today`
+- **Alle Tasks**: `https://chief-of-staff-worker.rknoerk.workers.dev/tasks/open`
+- **Ungelesene Emails**: `https://chief-of-staff-worker.rknoerk.workers.dev/emails/unread`
+- **Aktuelle Emails**: `https://chief-of-staff-worker.rknoerk.workers.dev/emails/recent`
+- **Notes/Werkbank**: `https://chief-of-staff-worker.rknoerk.workers.dev/notes/werkbank`
+- **Projekte**: `https://chief-of-staff-worker.rknoerk.workers.dev/notes/projects`
 
 ## Option 1: Morning Briefing
 
